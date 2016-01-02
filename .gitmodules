@@ -1,0 +1,4 @@
+[submodule "libs/WindowsNotifications"]
+	path = libs/WindowsNotifications
+	url = https://github.com/WindowsNotifications/NotificationsExtensions.git
+	branch = master

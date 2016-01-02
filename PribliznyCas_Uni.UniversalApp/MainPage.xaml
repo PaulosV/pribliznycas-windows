@@ -1,0 +1,99 @@
+﻿<Page
+    x:Class="PribliznyCas_Uni.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PribliznyCas_Uni"
+    xmlns:tiles="using:PribliznyCas_Uni.Tiles"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:WinRTXamlToolkit.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <local:TimeViewModel />
+    </Page.DataContext>
+
+    <SplitView x:Name="splitView" PanePlacement="Right" CompactPaneLength="0" IsPaneOpen="False">
+        <SplitView.Content>
+    <Grid>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EdgeUIThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+            <VisualState x:Name="Small">
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowWidth="0" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="ApproxTimeText.FontSize"
+              Value="60" />
+                </VisualState.Setters>
+            </VisualState>
+
+            <VisualState x:Name="Big">
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowWidth="650" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                        <Setter Target="ApproxTimeText.FontSize"
+              Value="80" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Center">
+
+            <TextBlock x:Uid="ItIsApproximatelyText" Text="právě je přibližně" FontSize="{ThemeResource TextStyleLargeFontSize}"
+                       HorizontalAlignment="Center"/>
+            <Grid MinHeight="180" Margin="0,0,0,20" HorizontalAlignment="Stretch">
+                <TextBlock Name="ApproxTimeText"  Text="{Binding CurrentApproxTime}" FontSize="60"
+                       Height="Auto"
+                       TextWrapping="WrapWholeWords"
+                       FontStretch="Condensed"
+                       FontFamily="{ThemeResource PivotTitleFontFamily}"
+                       HorizontalAlignment="Center" Margin="0,0,0,0" TextAlignment="Center"
+                       VerticalAlignment="Center"/>
+            </Grid>
+            <Button x:Uid="MorePreciseButton" x:Name="btMorePrecise" Content="chci to přesněji" HorizontalAlignment="Center" 
+                    Click="btMorePrecise_Click" Background="{ThemeResource DarkButtonBackgroundBrush}" />
+            <ProgressBar Minimum="0" Maximum="6" Value="{Binding CurrentTierInt}" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" />
+            <Button x:Uid="LessPreciseButton" x:Name="btLessPrecise" Content="chci to méně přesně" HorizontalAlignment="Center" 
+                    Click="btLessPrecise_Click" Background="{ThemeResource DarkButtonBackgroundBrush}" />
+        </StackPanel>
+
+    </Grid>
+        </SplitView.Content>
+    <SplitView.Pane>
+        <StackPanel HorizontalAlignment="Stretch" Margin="18,18,12,0">
+            <TextBlock x:Uid="SettingsTitle" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,0,0,12">Settings</TextBlock>
+            <TextBlock x:Uid="SettingsLanguage">Language</TextBlock>
+            <ComboBox x:Name="settingsLangBox" SelectedValue="czech" HorizontalAlignment="Stretch" SelectionChanged="SettingsLangBox_OnSelectionChanged">
+                    <ComboBox.Items>
+                        <ComboBoxItem>czech</ComboBoxItem>
+                        <ComboBoxItem>english</ComboBoxItem>
+                    </ComboBox.Items>
+            </ComboBox>
+        </StackPanel>
+    </SplitView.Pane>
+    </SplitView>
+
+    <Page.BottomAppBar>
+        <CommandBar Background="{ThemeResource DarkButtonBackgroundBrush}">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Uid="PinTileToStart" x:Name="appBarPin" Icon="Pin" Label="připnout" Click="appBarPin_Click" />
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Uid="SettingsAppBar" x:Name="appBarSettings" Label="nastavení" Click="AppBarSettings_OnClick" />
+                <AppBarButton x:Uid="AboutAppBar" x:Name="appBarAbout" Icon="Like" Label="o appce" Click="appBarAbout_Click" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

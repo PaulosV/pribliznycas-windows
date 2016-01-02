@@ -1,0 +1,10 @@
+﻿<Application
+    x:Class="PribliznyCas_Uni.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PribliznyCas_Uni" RequestedTheme="Dark">
+    <Application.Resources>
+        <SolidColorBrush x:Key="DarkButtonBackgroundBrush" Color="#0F808080"/>
+    </Application.Resources>
+
+</Application>
