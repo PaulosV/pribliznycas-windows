@@ -6,7 +6,9 @@ namespace TimeApprox.PRC
     public sealed class Settings
     {
         ApplicationDataContainer roamingSettings;
+        ApplicationDataContainer localSettings;
         ApplicationDataContainer settingsContainer;
+        ApplicationDataContainer localSettingsContainer;
 
         public static string LastTileScheduleSetting { get { return "LastTileScheduleTime"; } }
         public static string TierTile { get { return "TierTile"; } }
@@ -17,6 +19,9 @@ namespace TimeApprox.PRC
         {
             roamingSettings = Windows.Storage.ApplicationData.Current.RoamingSettings;
             settingsContainer = roamingSettings.CreateContainer("AppSettings", ApplicationDataCreateDisposition.Always);
+
+            localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            localSettingsContainer = localSettings.CreateContainer("AppSettings", ApplicationDataCreateDisposition.Always);
         }
 
         // TODO: this is just copying code. Something better must be done!
@@ -26,17 +31,17 @@ namespace TimeApprox.PRC
             get
             {
                 object dto;
-                if (settingsContainer.Values.TryGetValue(LastTileScheduleSetting, out dto))
+                if (localSettingsContainer.Values.TryGetValue(LastTileScheduleSetting, out dto))
                     return (DateTimeOffset)dto;
                 else return DateTimeOffset.MinValue;
             }
             set
             {
                 DateTimeOffset dto = (DateTimeOffset)value;
-                if (!settingsContainer.Values.ContainsKey(LastTileScheduleSetting))
-                    settingsContainer.Values.Add(LastTileScheduleSetting, dto);
+                if (!localSettingsContainer.Values.ContainsKey(LastTileScheduleSetting))
+                    localSettingsContainer.Values.Add(LastTileScheduleSetting, dto);
                 else
-                    settingsContainer.Values[LastTileScheduleSetting] = dto;
+                    localSettingsContainer.Values[LastTileScheduleSetting] = dto;
             }
         }
 
@@ -45,17 +50,17 @@ namespace TimeApprox.PRC
             get
             {
                 object tier;
-                if (settingsContainer.Values.TryGetValue(TierTile, out tier))
+                if (localSettingsContainer.Values.TryGetValue(TierTile, out tier))
                     return (Tier) tier;
                 else return ApproxTime.DefaultTier;
             }
             set
             {
                 int tierInt = (int)value;
-                if (!settingsContainer.Values.ContainsKey(TierTile))
-                    settingsContainer.Values.Add(TierTile, tierInt);
+                if (!localSettingsContainer.Values.ContainsKey(TierTile))
+                    localSettingsContainer.Values.Add(TierTile, tierInt);
                 else
-                    settingsContainer.Values[TierTile] = tierInt;
+                    localSettingsContainer.Values[TierTile] = tierInt;
             }
         }
 
