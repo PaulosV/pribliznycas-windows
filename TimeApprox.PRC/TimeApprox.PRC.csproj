@@ -48,7 +48,7 @@
     <PRIResource Include="Strings\cs\TimeResources.resw" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\libs\NotificationsExtensions\Windows 10\NotificationsExtensions.Win10.Portable\NotificationsExtensions.Win10.Portable.csproj">
+    <ProjectReference Include="..\libs\WindowsNotifications\Windows 10\NotificationsExtensions.Win10.Portable\NotificationsExtensions.Win10.Portable.csproj">
       <Project>{df77ce61-4633-49ec-90b1-debe0ed19eb6}</Project>
       <Name>NotificationsExtensions.Win10.Portable</Name>
     </ProjectReference>

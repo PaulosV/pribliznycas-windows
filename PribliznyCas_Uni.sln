@@ -20,20 +20,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PribliznyCas_Uni.Background
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NotificationsExtensions", "NotificationsExtensions", "{241AA042-0458-4C8A-9DA1-C8F2E92406B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationsExtensions.Win10.Portable", "libs\NotificationsExtensions\Windows 10\NotificationsExtensions.Win10.Portable\NotificationsExtensions.Win10.Portable.csproj", "{DF77CE61-4633-49EC-90B1-DEBE0ED19EB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationsExtensions.Win10.Portable", "libs\WindowsNotifications\Windows 10\NotificationsExtensions.Win10.Portable\NotificationsExtensions.Win10.Portable.csproj", "{DF77CE61-4633-49EC-90B1-DEBE0ED19EB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationsExtensions.Win10.WinRT", "libs\NotificationsExtensions\Windows 10\NotificationsExtensions.Win10.WinRT\NotificationsExtensions.Win10.WinRT.csproj", "{2E0F30A7-4D63-427D-B547-024B44BD2CFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationsExtensions.Win10.WinRT", "libs\WindowsNotifications\Windows 10\NotificationsExtensions.Win10.WinRT\NotificationsExtensions.Win10.WinRT.csproj", "{2E0F30A7-4D63-427D-B547-024B44BD2CFB}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NotificationsExtensions", "libs\NotificationsExtensions\Windows 10\NotificationsExtensions\NotificationsExtensions.shproj", "{8F4CC187-1AE8-4DB4-9CBC-0380DE29E84B}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NotificationsExtensions", "libs\WindowsNotifications\Windows 10\NotificationsExtensions\NotificationsExtensions.shproj", "{8F4CC187-1AE8-4DB4-9CBC-0380DE29E84B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationsExtensions.Win10.NETCore", "libs\NotificationsExtensions\Windows 10\NotificationsExtensions.Win10.NETCore\NotificationsExtensions.Win10.NETCore.csproj", "{D904D8C8-AEC5-440B-B80E-D42FF3B91EDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationsExtensions.Win10.NETCore", "libs\WindowsNotifications\Windows 10\NotificationsExtensions.Win10.NETCore\NotificationsExtensions.Win10.NETCore.csproj", "{D904D8C8-AEC5-440B-B80E-D42FF3B91EDE}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		libs\NotificationsExtensions\Windows 10\NotificationsExtensions\NotificationsExtensions.projitems*{8f4cc187-1ae8-4db4-9cbc-0380de29e84b}*SharedItemsImports = 13
-		libs\NotificationsExtensions\Windows 10\NotificationsExtensions\NotificationsExtensions.projitems*{d904d8c8-aec5-440b-b80e-d42ff3b91ede}*SharedItemsImports = 4
-		libs\NotificationsExtensions\Windows 10\NotificationsExtensions\NotificationsExtensions.projitems*{df77ce61-4633-49ec-90b1-debe0ed19eb6}*SharedItemsImports = 4
-		libs\NotificationsExtensions\Windows 10\NotificationsExtensions\NotificationsExtensions.projitems*{2e0f30a7-4d63-427d-b547-024b44bd2cfb}*SharedItemsImports = 4
+		libs\WindowsNotifications\Windows 10\NotificationsExtensions\NotificationsExtensions.projitems*{8f4cc187-1ae8-4db4-9cbc-0380de29e84b}*SharedItemsImports = 13
+		libs\WindowsNotifications\Windows 10\NotificationsExtensions\NotificationsExtensions.projitems*{d904d8c8-aec5-440b-b80e-d42ff3b91ede}*SharedItemsImports = 4
+		libs\WindowsNotifications\Windows 10\NotificationsExtensions\NotificationsExtensions.projitems*{df77ce61-4633-49ec-90b1-debe0ed19eb6}*SharedItemsImports = 4
+		libs\WindowsNotifications\Windows 10\NotificationsExtensions\NotificationsExtensions.projitems*{2e0f30a7-4d63-427d-b547-024b44bd2cfb}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

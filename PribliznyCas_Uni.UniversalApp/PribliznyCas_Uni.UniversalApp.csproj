@@ -181,7 +181,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\libs\NotificationsExtensions\Windows 10\NotificationsExtensions.Win10.WinRT\NotificationsExtensions.Win10.WinRT.csproj">
+    <ProjectReference Include="..\libs\WindowsNotifications\Windows 10\NotificationsExtensions.Win10.WinRT\NotificationsExtensions.Win10.WinRT.csproj">
       <Project>{2e0f30a7-4d63-427d-b547-024b44bd2cfb}</Project>
       <Name>NotificationsExtensions.Win10.WinRT</Name>
     </ProjectReference>
