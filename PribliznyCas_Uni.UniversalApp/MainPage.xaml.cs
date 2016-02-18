@@ -40,7 +40,17 @@ namespace PribliznyCas_Uni
 
             this.NavigationCacheMode = NavigationCacheMode.Enabled;
 
+            Application.Current.Resuming += Current_Resuming;
+
             this.Loaded += MainPage_Loaded;
+        }
+
+        private async void Current_Resuming(object sender, object e)
+        {
+            if (this.tvm != null)
+            {
+                await this.tvm.UpdateTime();
+            }
         }
 
         void InitializeLanguage()
