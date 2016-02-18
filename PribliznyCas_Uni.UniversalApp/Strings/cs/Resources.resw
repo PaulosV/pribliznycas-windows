@@ -162,6 +162,9 @@
   <data name="MorePreciseShortButton.Content" xml:space="preserve">
     <value>přesněji</value>
   </data>
+  <data name="PinningPleaseDontLeave.Text" xml:space="preserve">
+    <value>připínám, nikam nechoďte...</value>
+  </data>
   <data name="PinTileToStart.Label" xml:space="preserve">
     <value>připnout na start</value>
   </data>

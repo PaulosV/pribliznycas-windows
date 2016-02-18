@@ -136,11 +136,13 @@ namespace PribliznyCas_Uni
                 new Uri("ms-appx:///Assets/Square150x150Logo.png"), new Uri("ms-appx:///Assets/Wide310x150Logo.png"));
             if (await st.RequestCreateAsync())
             {
+                tvm.IsPinningToStart = true;
                 await Task.Run(() =>
                 {
                     ApproxTileUpdater.ScheduleLiveTileUpdates();
                     ApproxTileUpdater.UpdateLiveTiles();
                 });
+                tvm.IsPinningToStart = false;
             }
         }
 

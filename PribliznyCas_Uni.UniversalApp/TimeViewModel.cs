@@ -71,6 +71,18 @@ namespace PribliznyCas_Uni
             }
         }
 
+       
+        private bool _isPinningToStart;
+        public bool IsPinningToStart
+        {
+            get { return _isPinningToStart; }
+            set
+            {
+                _isPinningToStart = value;
+                NotifyPropertyChanged(nameof(IsPinningToStart));
+            }
+        }
+
         public async Task UpdateTime()
         {
             await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal,

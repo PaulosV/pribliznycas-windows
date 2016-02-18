@@ -7,9 +7,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:WinRTXamlToolkit.Controls"
+    xmlns:converters="using:WinRTXamlToolkit.Converters"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.Resources>
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Page.Resources>
+    
     <Page.DataContext>
         <local:TimeViewModel />
     </Page.DataContext>
@@ -69,7 +74,17 @@
                     Click="btLessPrecise_Click" Background="{ThemeResource DarkButtonBackgroundBrush}" />
         </StackPanel>
 
-    </Grid>
+                <Grid x:Name="PinningProgressGrid" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,0" Visibility="{Binding IsPinningToStart, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <ProgressRing Width="48" Height="48" IsActive="{Binding IsPinningToStart}" />
+                    <TextBlock Grid.Column="1" x:Uid="PinningPleaseDontLeave" Text="připínám, nikam nechoďte..." VerticalAlignment="Center" FontSize="18" Margin="6,0,12,0" />
+                </Grid>
+
+            </Grid>
         </SplitView.Content>
     <SplitView.Pane>
         <StackPanel HorizontalAlignment="Stretch" Margin="18,18,12,0">

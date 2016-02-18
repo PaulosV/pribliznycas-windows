@@ -174,4 +174,7 @@
   <data name="SettingsTitle.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
+  <data name="PinningPleaseDontLeave.Text" xml:space="preserve">
+    <value>pinning, stay here please...</value>
+  </data>
 </root>
