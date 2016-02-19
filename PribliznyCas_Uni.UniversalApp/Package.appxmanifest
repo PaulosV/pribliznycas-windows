@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="64588PavelValach.Piblinas" Publisher="CN=7575978F-8493-4001-BB52-4B71826C3A39" Version="1.1.5.0" />
+  <Identity Name="64588PavelValach.Piblinas" Publisher="CN=7575978F-8493-4001-BB52-4B71826C3A39" Version="1.2.6.0" />
   <mp:PhoneIdentity PhoneProductId="1980f1c9-f8ce-4170-ba5f-547e8bb896a0" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Přibližný čas</DisplayName>
