@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using TimeApprox.PRC;
@@ -17,6 +18,12 @@ namespace PribliznyCas_Uni
         private Settings _settings;
 
         public bool SaveTierStateForApp { get; set; }
+        public int MinTierNumber => (int)Tier.Dunno;
+        public int MaxTierNumber => (int)Tier.PreciseNtp;
+
+        public DateTimeOffset CurrentNtpTime { get; set; }
+        public DateTimeOffset CurrentNtpTimeBase { get; set; }
+        public TimeSpan DifferenceBetweenNtpAndSystem { get; set; }
 
         public TimeViewModel()
         {
@@ -25,8 +32,8 @@ namespace PribliznyCas_Uni
 
             _settings = new Settings();
             _currentTier = _settings.AppCurrentTier;
-
-            _updateTimer = new Timer(TickTock, null, TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1));
+            
+            _updateTimer = new Timer(TickTock, null, CurrentTimerRefresh, CurrentTimerRefresh);
         }
 
         private string DetermineAppLanguage()
@@ -43,6 +50,22 @@ namespace PribliznyCas_Uni
             await UpdateTime();
         }
 
+        private TimeSpan CurrentTimerRefresh
+        {
+            get
+            {
+                if (CurrentTier == Tier.PreciseNtp)
+                {
+                    return TimeSpan.FromMilliseconds(100);
+                }
+                if (CurrentTier == Tier.SystemClock)
+                {
+                    return TimeSpan.FromMilliseconds(333);
+                }
+                return TimeSpan.FromMinutes(1);
+            }
+        }
+
         private Tier _currentTier;
         public Tier CurrentTier
         {
@@ -55,6 +78,9 @@ namespace PribliznyCas_Uni
                 NotifyPropertyChanged("CurrentTier");
                 NotifyPropertyChanged("CurrentTierInt");
                 NotifyPropertyChanged("CurrentApproxTime");
+
+                // update timer
+                _updateTimer.Change(CurrentTimerRefresh, CurrentTimerRefresh);
             }
         }
 
@@ -67,7 +93,15 @@ namespace PribliznyCas_Uni
         {
             get
             {
-                return _approxTime.GetCurrentApproxTime(DateTimeOffset.Now, CurrentTier);
+                if (CurrentTier < Tier.PreciseNtp)
+                {
+                    return _approxTime.GetCurrentApproxTime(DateTimeOffset.Now, CurrentTier);
+                }
+                else
+                {
+                    return _approxTime.GetCurrentApproxTime(DateTimeOffset.UtcNow.Add(DifferenceBetweenNtpAndSystem).ToOffset(
+                        DateTimeOffset.Now.Offset), CurrentTier);
+                }
             }
         }
 
@@ -100,18 +134,26 @@ namespace PribliznyCas_Uni
 
         public void SetMorePrecise()
         {
-            int maxPrecise = 6;
-            if ((int)CurrentTier >= maxPrecise) return;
+            if ((int)CurrentTier >= MaxTierNumber) return;
 
             CurrentTier++;
         }
 
         public void SetLessPrecise()
         {
-            int minPrecise = 0;
-            if ((int)CurrentTier <= minPrecise) return;
+            if ((int)CurrentTier <= MinTierNumber) return;
 
             CurrentTier--;
+        }
+
+        public async Task InitializeNtp()
+        {
+            Debug.WriteLine("Starting NTP client");
+            var client = new Yort.Ntp.NtpClient("tik.cesnet.cz");
+            CurrentNtpTime = await client.RequestTimeAsync();
+            CurrentNtpTimeBase = DateTimeOffset.UtcNow;
+            DifferenceBetweenNtpAndSystem = CurrentNtpTimeBase - CurrentNtpTime;
+            Debug.WriteLine($"Received time: {CurrentNtpTime}");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
