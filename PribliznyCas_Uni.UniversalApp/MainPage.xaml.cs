@@ -132,7 +132,7 @@ namespace PribliznyCas_Uni
             // save time settings
             Settings settings = new Settings();
             settings.AppLanguage = Frame.Language;
-            settings.TileTier = tvm.CurrentTier;
+            settings.TileTier = tvm.CurrentTier <= Tier.SystemClock ? tvm.CurrentTier : Tier.SystemClock;
             settings.LastTileSchedule = DateTimeOffset.MinValue;
 
             SecondaryTile st = new SecondaryTile(ApproxTileUpdater.SecondaryAppTileId, "Approx Time", "Approx Time", ApproxTileUpdater.SecondaryAppTileId, TileOptions.None,

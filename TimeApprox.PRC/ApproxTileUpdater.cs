@@ -107,7 +107,20 @@ namespace TimeApprox.PRC
 
                 DateTimeOffset dtoTime;
                 Debug.WriteLine("Set-up tier: {0}", settings.TileTier);
-                if (settings.TileTier == Tier.QuarterHour)
+                if (settings.TileTier >= Tier.SystemClock)
+                {
+                    for (int m = 0; m < 60; m += 1)
+                    {
+                        dtoTime = new DateTimeOffset(DateTime.Now.Year, DateTime.Now.Month,
+                            DateTime.Now.Day, h, m, 0, DateTimeOffset.Now.Offset);
+                        if (isNextDay)
+                            dtoTime = dtoTime.AddDays(1);
+                        Debug.WriteLine("DT for notification: {0}", dtoTime);
+
+                        ScheduleTileUpdate(dtoTime, settings);
+                    }
+                }
+                else if (settings.TileTier == Tier.QuarterHour)
                 {
                     for (int m = 0; m < 60; m+=3)
                     {
