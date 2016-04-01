@@ -9,5 +9,7 @@
         DayTime = 4,
         Hour = 5,
         QuarterHour = 6,
+        SystemClock = 7,
+        PreciseNtp = 8,
     }
 }

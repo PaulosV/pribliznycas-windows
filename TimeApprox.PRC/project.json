@@ -1,6 +1,8 @@
 ﻿{
   "supports": {},
-  "dependencies": {},
+  "dependencies": {
+    "Yort.Ntp.Portable": "1.0.6"
+  },
   "frameworks": {
     ".NETCore,Version=v4.5.1": {}
   }

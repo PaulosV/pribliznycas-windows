@@ -69,7 +69,7 @@
             </Grid>
             <Button x:Uid="MorePreciseButton" x:Name="btMorePrecise" Content="chci to přesněji" HorizontalAlignment="Center" 
                     Click="btMorePrecise_Click" Background="{ThemeResource DarkButtonBackgroundBrush}" />
-            <ProgressBar Minimum="0" Maximum="6" Value="{Binding CurrentTierInt}" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" />
+            <ProgressBar Minimum="0" Maximum="{Binding MaxTierNumber}" Value="{Binding CurrentTierInt}" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" />
             <Button x:Uid="LessPreciseButton" x:Name="btLessPrecise" Content="chci to méně přesně" HorizontalAlignment="Center" 
                     Click="btLessPrecise_Click" Background="{ThemeResource DarkButtonBackgroundBrush}" />
         </StackPanel>

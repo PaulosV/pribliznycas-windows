@@ -50,6 +50,7 @@ namespace PribliznyCas_Uni
             if (this.tvm != null)
             {
                 await this.tvm.UpdateTime();
+                await tvm.InitializeNtp();
             }
         }
 
@@ -112,6 +113,8 @@ namespace PribliznyCas_Uni
 
             SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
             base.OnNavigatedTo(e);
+
+            await tvm.InitializeNtp();
         }
 
         private async void btMorePrecise_Click(object sender, RoutedEventArgs e)

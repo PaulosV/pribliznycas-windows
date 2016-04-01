@@ -113,6 +113,14 @@ namespace TimeApprox.PRC
                     idx = idx < 0 ? idx + size : idx;
                     return LocalizedTimeCodes.GetTimeName(_quarterHours[(int)idx]);
 
+                // na sekundy - systémový čas
+                case Tier.SystemClock:
+                    return time.ToString("HH:mm:ss", new CultureInfo(language));
+                
+                // na desetiny sekundy - NTP :-)
+                case Tier.PreciseNtp:
+                    return time.ToString("HH:mm:ss.f z", new CultureInfo(language));
+
                 // někdy... :D
                 case Tier.Dunno:
                 default:
