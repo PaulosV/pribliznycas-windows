@@ -115,7 +115,7 @@ namespace TimeApprox.PRC
 
                 // na sekundy - systémový čas
                 case Tier.SystemClock:
-                    return time.ToString("HH:mm:ss z", new CultureInfo(language));
+                    return time.ToString("HH:mm:ss", new CultureInfo(language));
                 
                 // na desetiny sekundy - NTP :-)
                 case Tier.PreciseNtp:

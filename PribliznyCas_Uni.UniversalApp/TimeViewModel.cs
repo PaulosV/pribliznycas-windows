@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Threading;
@@ -21,6 +22,7 @@ namespace PribliznyCas_Uni
         public int MinTierNumber => (int)Tier.Dunno;
         public int MaxTierNumber => (int)Tier.PreciseNtp;
 
+        public IList<string> NtpServers { get; set; } = new List<string> { "0.pool.ntp.org", "1.pool.ntp.org", "2.pool.ntp.org", "3.pool.ntp.org" };
         public DateTimeOffset CurrentNtpTime { get; set; }
         public DateTimeOffset CurrentNtpTimeBase { get; set; }
         public TimeSpan DifferenceBetweenNtpAndSystem { get; set; }
@@ -148,12 +150,22 @@ namespace PribliznyCas_Uni
 
         public async Task InitializeNtp()
         {
-            Debug.WriteLine("Starting NTP client");
-            var client = new Yort.Ntp.NtpClient("tik.cesnet.cz");
-            CurrentNtpTime = await client.RequestTimeAsync();
-            CurrentNtpTimeBase = DateTimeOffset.UtcNow;
-            DifferenceBetweenNtpAndSystem = CurrentNtpTimeBase - CurrentNtpTime;
-            Debug.WriteLine($"Received time: {CurrentNtpTime}");
+            try
+            {
+                string randomServer = NtpServers[new Random().Next(NtpServers.Count)];
+                Debug.WriteLine($"Starting NTP client: {randomServer}");
+
+                var client = new Yort.Ntp.NtpClient(randomServer);
+                CurrentNtpTime = await client.RequestTimeAsync();
+                Debug.WriteLine($"Received time: {CurrentNtpTime}");
+                CurrentNtpTimeBase = DateTimeOffset.UtcNow;
+                DifferenceBetweenNtpAndSystem = CurrentNtpTimeBase - CurrentNtpTime;
+                Debug.WriteLine($"System-NTP Diff: {DifferenceBetweenNtpAndSystem}");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Could not receive time: {ex}");
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
