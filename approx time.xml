@@ -1,0 +1,20 @@
+<tile>
+  <visual branding="none">
+
+    <binding template="TileMedium" hint-textStacking="center">
+      <text hint-style="base" hint-align="center" hint-wrap="true">tři čtvrtě na čtyři</text>
+    </binding>
+
+    <binding template="TileWide" hint-textStacking="center">
+      <text hint-style="subheader" hint-align="center" hint-wrap="true">tři čtvrtě na čtyři</text>
+
+    </binding>
+
+    <binding template="TileLarge" hint-textStacking="center">
+      <text hint-style="subheader" hint-align="center" hint-wrap="true">tři čtvrtě na čtyři</text>
+
+    </binding>
+
+
+  </visual>
+</tile>
