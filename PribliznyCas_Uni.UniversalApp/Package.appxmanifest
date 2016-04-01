@@ -12,6 +12,9 @@
   </Dependencies>
   <Resources>
     <Resource Language="x-generate" />
+    <Resource Language="en" />
+    <Resource Language="en-gb" />
+    <Resource Language="cs" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PribliznyCas_Uni.UniversalApp.App">

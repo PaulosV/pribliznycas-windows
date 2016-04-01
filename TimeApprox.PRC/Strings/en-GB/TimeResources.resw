@@ -117,65 +117,133 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AboutAppBar.Label" xml:space="preserve">
-    <value>o appce</value>
+  <data name="afternoon" xml:space="preserve">
+    <value>afternoon</value>
   </data>
-  <data name="AboutAppVersion.Text" xml:space="preserve">
-    <value>verze</value>
+  <data name="beforenoon" xml:space="preserve">
+    <value>before noon</value>
   </data>
-  <data name="AboutDescription.Text" xml:space="preserve">
-    <value>Kam ten spěch? Přestaňte používat všechny hodiny přesnější než tyto a uspokojení z vašeho života se zvedne o 83,57 %.
-Aprílová edice :-)</value>
+  <data name="dunno" xml:space="preserve">
+    <value>no idea</value>
   </data>
-  <data name="AboutMoreAppsFromDevButton.Content" xml:space="preserve">
-    <value>další appky</value>
+  <data name="evening" xml:space="preserve">
+    <value>evening</value>
   </data>
-  <data name="AboutName.Text" xml:space="preserve">
-    <value>Přibližný čas</value>
+  <data name="lunchtime" xml:space="preserve">
+    <value>around lunch</value>
   </data>
-  <data name="AboutOriginalAuthor.Text" xml:space="preserve">
-    <value>Původní autor Pavel Vaněček, 2014</value>
+  <data name="morning" xml:space="preserve">
+    <value>morning</value>
   </data>
-  <data name="AboutRateAppButton.Content" xml:space="preserve">
-    <value>ohodnoťte tuto jedinečnou aplikaci! ;-)</value>
+  <data name="night" xml:space="preserve">
+    <value>night</value>
   </data>
-  <data name="AboutWindowsVersionBy.Text" xml:space="preserve">
-    <value>Windows verzi má na svědomí</value>
+  <data name="time-0" xml:space="preserve">
+    <value>midnight</value>
   </data>
-  <data name="Description" xml:space="preserve">
-    <value>Kam ten spěch? Přestaňte používat všechny hodiny přesnější než tyto a uspokojení z vašeho života se zvedne o 83,57 %.</value>
+  <data name="time-1" xml:space="preserve">
+    <value>one</value>
   </data>
-  <data name="DisplayName" xml:space="preserve">
-    <value>Přibližný čas</value>
+  <data name="time-10" xml:space="preserve">
+    <value>ten</value>
   </data>
-  <data name="ItIsApproximatelyText.Text" xml:space="preserve">
-    <value>právě je přibližně</value>
+  <data name="time-11" xml:space="preserve">
+    <value>eleven</value>
   </data>
-  <data name="LessPreciseButton.Content" xml:space="preserve">
-    <value>chci to méně přesně</value>
+  <data name="time-12" xml:space="preserve">
+    <value>noon</value>
   </data>
-  <data name="LessPreciseShortButton.Content" xml:space="preserve">
-    <value>méně přesně</value>
+  <data name="time-13" xml:space="preserve">
+    <value>one</value>
   </data>
-  <data name="MorePreciseButton.Content" xml:space="preserve">
-    <value>chci to přesněji</value>
+  <data name="time-14" xml:space="preserve">
+    <value>two</value>
   </data>
-  <data name="MorePreciseShortButton.Content" xml:space="preserve">
-    <value>přesněji</value>
+  <data name="time-15" xml:space="preserve">
+    <value>three</value>
   </data>
-  <data name="PinningPleaseDontLeave.Text" xml:space="preserve">
-    <value>připínám, nikam nechoďte...</value>
+  <data name="time-16" xml:space="preserve">
+    <value>four</value>
   </data>
-  <data name="PinTileToStart.Label" xml:space="preserve">
-    <value>připnout na start</value>
+  <data name="time-17" xml:space="preserve">
+    <value>five</value>
   </data>
-  <data name="SettingsAppBar.Label" xml:space="preserve">
-    <value>nastavení</value>
+  <data name="time-18" xml:space="preserve">
+    <value>six</value>
   </data>
-  <data name="SettingsLanguage.Text" xml:space="preserve">
-    <value>Jazyk / Language</value>
+  <data name="time-19" xml:space="preserve">
+    <value>seven</value>
   </data>
-  <data name="SettingsTitle.Text" xml:space="preserve">
-    <value>Nastavení</value>
+  <data name="time-2" xml:space="preserve">
+    <value>two</value>
+  </data>
+  <data name="time-20" xml:space="preserve">
+    <value>eight</value>
+  </data>
+  <data name="time-21" xml:space="preserve">
+    <value>nine</value>
+  </data>
+  <data name="time-22" xml:space="preserve">
+    <value>ten</value>
+  </data>
+  <data name="time-23" xml:space="preserve">
+    <value>eleven</value>
+  </data>
+  <data name="time-3" xml:space="preserve">
+    <value>three</value>
+  </data>
+  <data name="time-4" xml:space="preserve">
+    <value>four</value>
+  </data>
+  <data name="time-5" xml:space="preserve">
+    <value>five</value>
+  </data>
+  <data name="time-6" xml:space="preserve">
+    <value>six</value>
+  </data>
+  <data name="time-7" xml:space="preserve">
+    <value>seven</value>
+  </data>
+  <data name="time-8" xml:space="preserve">
+    <value>eight</value>
+  </data>
+  <data name="time-9" xml:space="preserve">
+    <value>nine</value>
+  </data>
+  <data name="time-q-10" xml:space="preserve">
+    <value>almost quarter past</value>
+  </data>
+  <data name="time-q-15" xml:space="preserve">
+    <value>quarter past</value>
+  </data>
+  <data name="time-q-20" xml:space="preserve">
+    <value>past quarter past</value>
+  </data>
+  <data name="time-q-25" xml:space="preserve">
+    <value>soon-to-be-half past</value>
+  </data>
+  <data name="time-q-30" xml:space="preserve">
+    <value>half past</value>
+  </data>
+  <data name="time-q-35" xml:space="preserve">
+    <value>slightly over half past</value>
+  </data>
+  <data name="time-q-40" xml:space="preserve">
+    <value>might-be-a-quarter to</value>
+  </data>
+  <data name="time-q-45" xml:space="preserve">
+    <value>quarter to</value>
+  </data>
+  <data name="time-q-5" xml:space="preserve">
+    <value>after ding dong</value>
+  </data>
+  <data name="time-q-50" xml:space="preserve">
+    <value>past a quarter to</value>
+  </data>
+  <data name="time-q-55" xml:space="preserve">
+    <value>incoming ding dong</value>
+  </data>
+  <data name="time-q-60" xml:space="preserve">
+    <value>ding dong</value>
   </data>
 </root>

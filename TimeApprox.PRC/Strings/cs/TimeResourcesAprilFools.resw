@@ -117,65 +117,133 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AboutAppBar.Label" xml:space="preserve">
-    <value>o appce</value>
+  <data name="afternoon" xml:space="preserve">
+    <value>večer</value>
   </data>
-  <data name="AboutAppVersion.Text" xml:space="preserve">
-    <value>verze</value>
+  <data name="beforenoon" xml:space="preserve">
+    <value>večer</value>
   </data>
-  <data name="AboutDescription.Text" xml:space="preserve">
-    <value>Kam ten spěch? Přestaňte používat všechny hodiny přesnější než tyto a uspokojení z vašeho života se zvedne o 83,57 %.
-Aprílová edice :-)</value>
+  <data name="dunno" xml:space="preserve">
+    <value>někdy... nebo taky nikdy...</value>
   </data>
-  <data name="AboutMoreAppsFromDevButton.Content" xml:space="preserve">
-    <value>další appky</value>
+  <data name="evening" xml:space="preserve">
+    <value>večer</value>
   </data>
-  <data name="AboutName.Text" xml:space="preserve">
-    <value>Přibližný čas</value>
+  <data name="lunchtime" xml:space="preserve">
+    <value>večer</value>
   </data>
-  <data name="AboutOriginalAuthor.Text" xml:space="preserve">
-    <value>Původní autor Pavel Vaněček, 2014</value>
+  <data name="morning" xml:space="preserve">
+    <value>večer</value>
   </data>
-  <data name="AboutRateAppButton.Content" xml:space="preserve">
-    <value>ohodnoťte tuto jedinečnou aplikaci! ;-)</value>
+  <data name="night" xml:space="preserve">
+    <value>nevečer</value>
   </data>
-  <data name="AboutWindowsVersionBy.Text" xml:space="preserve">
-    <value>Windows verzi má na svědomí</value>
+  <data name="time-0" xml:space="preserve">
+    <value>tahle noc patří mně!</value>
   </data>
-  <data name="Description" xml:space="preserve">
-    <value>Kam ten spěch? Přestaňte používat všechny hodiny přesnější než tyto a uspokojení z vašeho života se zvedne o 83,57 %.</value>
+  <data name="time-1" xml:space="preserve">
+    <value>ještě jednu půlku dáš</value>
   </data>
-  <data name="DisplayName" xml:space="preserve">
-    <value>Přibližný čas</value>
+  <data name="time-10" xml:space="preserve">
+    <value>šup do práce!</value>
   </data>
-  <data name="ItIsApproximatelyText.Text" xml:space="preserve">
-    <value>právě je přibližně</value>
+  <data name="time-11" xml:space="preserve">
+    <value>miluji svoji práci!</value>
   </data>
-  <data name="LessPreciseButton.Content" xml:space="preserve">
-    <value>chci to méně přesně</value>
+  <data name="time-12" xml:space="preserve">
+    <value>šup na oběd</value>
   </data>
-  <data name="LessPreciseShortButton.Content" xml:space="preserve">
-    <value>méně přesně</value>
+  <data name="time-13" xml:space="preserve">
+    <value>chrrrrr</value>
   </data>
-  <data name="MorePreciseButton.Content" xml:space="preserve">
-    <value>chci to přesněji</value>
+  <data name="time-14" xml:space="preserve">
+    <value>past vedle pasti!</value>
   </data>
-  <data name="MorePreciseShortButton.Content" xml:space="preserve">
-    <value>přesněji</value>
+  <data name="time-15" xml:space="preserve">
+    <value>to je nemožné!</value>
   </data>
-  <data name="PinningPleaseDontLeave.Text" xml:space="preserve">
-    <value>připínám, nikam nechoďte...</value>
+  <data name="time-16" xml:space="preserve">
+    <value>jedinou pi*ovinku...</value>
   </data>
-  <data name="PinTileToStart.Label" xml:space="preserve">
-    <value>připnout na start</value>
+  <data name="time-17" xml:space="preserve">
+    <value>... a musiš rozdělat cely traktor!</value>
   </data>
-  <data name="SettingsAppBar.Label" xml:space="preserve">
-    <value>nastavení</value>
+  <data name="time-18" xml:space="preserve">
+    <value>čas na prostřeno</value>
   </data>
-  <data name="SettingsLanguage.Text" xml:space="preserve">
-    <value>Jazyk / Language</value>
+  <data name="time-19" xml:space="preserve">
+    <value>tak co je nového?</value>
   </data>
-  <data name="SettingsTitle.Text" xml:space="preserve">
-    <value>Nastavení</value>
+  <data name="time-2" xml:space="preserve">
+    <value>párty nekončí!</value>
+  </data>
+  <data name="time-20" xml:space="preserve">
+    <value>čas na ordinaci</value>
+  </data>
+  <data name="time-21" xml:space="preserve">
+    <value>devět</value>
+  </data>
+  <data name="time-22" xml:space="preserve">
+    <value>pojď na jedno!</value>
+  </data>
+  <data name="time-23" xml:space="preserve">
+    <value>kupuješ další rundu!</value>
+  </data>
+  <data name="time-3" xml:space="preserve">
+    <value>***</value>
+  </data>
+  <data name="time-4" xml:space="preserve">
+    <value>počet noh tradiční židle</value>
+  </data>
+  <data name="time-5" xml:space="preserve">
+    <value>vaše průměrná známka</value>
+  </data>
+  <data name="time-6" xml:space="preserve">
+    <value>vstávat a cvičit!</value>
+  </data>
+  <data name="time-7" xml:space="preserve">
+    <value>brýtro!</value>
+  </data>
+  <data name="time-8" xml:space="preserve">
+    <value>zku*venej budík!</value>
+  </data>
+  <data name="time-9" xml:space="preserve">
+    <value>to už je devět?!</value>
+  </data>
+  <data name="time-q-10" xml:space="preserve">
+    <value>a čas stále běží</value>
+  </data>
+  <data name="time-q-15" xml:space="preserve">
+    <value>teprv čtvrt</value>
+  </data>
+  <data name="time-q-20" xml:space="preserve">
+    <value>nějak se to vleče</value>
+  </data>
+  <data name="time-q-25" xml:space="preserve">
+    <value>bude půl</value>
+  </data>
+  <data name="time-q-30" xml:space="preserve">
+    <value>umírám</value>
+  </data>
+  <data name="time-q-35" xml:space="preserve">
+    <value>tryzna</value>
+  </data>
+  <data name="time-q-40" xml:space="preserve">
+    <value>hnedle tři čtvrtě</value>
+  </data>
+  <data name="time-q-45" xml:space="preserve">
+    <value>to ještě sakra není celá?</value>
+  </data>
+  <data name="time-q-5" xml:space="preserve">
+    <value>a čas běží</value>
+  </data>
+  <data name="time-q-50" xml:space="preserve">
+    <value>po tři čtvrtě</value>
+  </data>
+  <data name="time-q-55" xml:space="preserve">
+    <value>bude celá</value>
+  </data>
+  <data name="time-q-60" xml:space="preserve">
+    <value>konečně celá</value>
   </data>
 </root>

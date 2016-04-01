@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
+    <PRIResource Include="Strings\en-GB\TimeResources.resw" />
+    <PRIResource Include="Strings\en-GB\TimeResourcesAprilFools.resw" />
+    <PRIResource Include="Strings\en\TimeResourcesAprilFools.resw" />
+    <PRIResource Include="Strings\cs\TimeResourcesAprilFools.resw" />
     <PRIResource Include="Strings\en\TimeResources.resw" />
     <PRIResource Include="Strings\cs\TimeResources.resw" />
   </ItemGroup>
@@ -52,6 +56,9 @@
       <Project>{df77ce61-4633-49ec-90b1-debe0ed19eb6}</Project>
       <Name>NotificationsExtensions.Win10.Portable</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SNTP\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
